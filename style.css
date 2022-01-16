@@ -1,0 +1,144 @@
+:root {
+    --violet: hsl(263, 55%, 52%);
+    --grayBlue: hsl(217, 19%, 35%);
+    --blackBlue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --gray: hsl(0, 0%, 81%);
+    --lightGray: hsl(210, 46%, 95%);
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font: 13px;
+    font-weight: 500;
+    background-color: var(--lightGray);
+    display: grid;
+    place-content: center;
+    color: var(--gray);
+}
+
+.wrapper {
+    margin: 4em 2em 4em 2em;
+    grid-template-columns: repeat(4, 1fr);    
+}
+
+article {
+    border-radius: 8px;
+    padding: 1.9em;
+    box-shadow: 10px 10px 20px var(--shadow);
+}
+
+article h3 {
+    color: var(--white);
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
+.circle {
+    border-radius: 50%;
+    border: 3px solid var(--gray);
+    width: 2.4em;
+}
+
+.info{
+    display: inline-block;
+    margin-left: 1em;
+    font-size: 13px;
+    margin-bottom: 1.5em;
+}
+
+.name {
+    color: var(--white);
+}
+
+.daniel {
+    background-color: var(--violet);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 1em;
+}
+
+.jonathan {
+    background-color: var(--grayBlue);
+}
+
+.jeanette {
+    background-color: var(--white);
+    color: var(--grayBlue);
+}
+
+.jeanette .name {
+    color:var(--grayBlue);
+}
+
+.jeanette h2 {
+    color: var(--gray);
+}
+
+.jeanette h3 {
+    color: var(--blackBlue);
+}
+
+.patrick {
+    background-color: var(--blackBlue);
+}
+
+.kira {
+    background-color: var(--white);
+    color: var(--grayBlue);
+}
+
+.kira .name {
+    color:var(--grayBlue);
+}
+
+.kira h2 {
+    color: var(--gray);
+}
+
+.kira h3 {
+    color: var(--blackBlue);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--grayBlue);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+ }
+
+ @media (min-width: 1000px) {
+    .wrapper {
+        display: grid;
+        gap: 1.5em;
+        grid-template-columns: repeat(4, 1fr);  
+        margin: 14em 12em 4em 12em;  
+    }
+
+    .daniel {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .patrick {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    
+
+    .kira {
+        grid-column-start: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+ }
